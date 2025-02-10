@@ -1,0 +1,458 @@
+body {
+  background-color: #E6F2FF; /* 你的淺藍色 */
+  margin: 0;
+  padding: 0;
+  min-height: 100vh; /* 確保背景填滿整個視窗 */
+}
+
+/* 登入頁面的整體布局 */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to right, #0d47a1, #1976d2); /* 深藍到淺藍的漸變 */
+}
+
+.login-box {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 350px;
+}
+
+h2 {
+  font-size: 28px;
+  color: #0d47a1;
+  margin-bottom: 20px;
+}
+
+/* 統一輸入框與按鈕的寬度 */
+.input-group input,
+.primary-btn,
+.secondary-btn {
+  width: 100%; /* 讓寬度統一 */
+  box-sizing: border-box; /* 確保 padding 不影響總寬度 */
+}
+
+/* 輸入框設計 */
+.input-group {
+  margin-bottom: 15px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #bbb;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.input-group input:focus {
+  border-color: #1976d2;
+  box-shadow: 0 0 5px rgba(25, 118, 210, 0.5);
+  outline: none;
+}
+
+/* 按鈕樣式 */
+.primary-btn, .secondary-btn {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.primary-btn {
+  background: #0d47a1;
+  color: white;
+}
+
+.primary-btn:hover {
+  background: #1565c0;
+}
+
+.secondary-btn {
+  background: transparent;
+  color: #0d47a1;
+  border: 2px solid #0d47a1;
+}
+
+.secondary-btn:hover {
+  background: #0d47a1;
+  color: white;
+}
+
+/*首頁*/
+/* 主頁背景色設為淡藍色 */
+.home {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  background-color: #E3F2FD; /* 淡藍色背景 */
+  padding: 40px;
+  border-radius: 8px; /* 增加圓角 */
+  color: #0D47A1; /* 深藍色文字，與背景對比 */
+}
+
+/* 標題樣式 */
+.home h1 {
+  font-size: 40px;
+  color: #0D47A1; /* 深藍色文字 */
+}
+
+.home h2 {
+  font-size: 20px;
+  color: #000000; /* 稍微深一點的藍色文字 */
+  margin-top: 10px;
+}
+
+
+
+/* 設定頁面外層容器 */
+.setting-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: #E3F2FD; /* 淡藍色背景 */
+  text-align: center;
+}
+
+/* 設定標題 */
+.setting-title {
+  font-size: 36px;
+  color: #0d47a1;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+/* 按鈕區塊 */
+.setting-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* 按鈕間距 */
+}
+
+/* 刪除帳號按鈕 (警示) */
+.delete-account-btn {
+  background-color: #d32f2f;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.delete-account-btn:hover {
+  background-color: #b71c1c;
+  transform: scale(1.05);
+}
+
+
+
+/* 統計項目樣式 - 改為圓角按鈕風格，並加上一些陰影來區隔 */
+.statistics {
+  list-style: none;
+  padding: 0;
+  margin-top: 30px;
+}
+
+.statistics li {
+  margin-bottom: 15px;
+}
+
+.statistics button {
+  padding: 12px 25px;
+  font-size: 18px;
+  border: none;
+  border-radius: 12px; /* 加圓角 */
+  background-color: #1A237E; /* 深藍色背景 */
+  color: white; /* 白色文字 */
+  cursor: pointer;
+  text-transform: uppercase; /* 文字大寫 */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 加入陰影效果來區隔 */
+}
+
+.statistics button:hover {
+  background-color: #1565C0; /* 懸停時顏色變化 */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* 懸停時加強陰影 */
+}
+
+/* 新增統計項目按鈕 */
+.create-item-btn {
+  padding: 12px 25px;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 20px;
+  background-color: white;
+  color: #1A237E;
+  border: #1A237E 2px solid;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.create-item-btn:hover {
+  background-color: #86beff; /* 懸停效果 */
+}
+
+/* 登出按鈕 - 置中並增強對比 */
+.logout-btn {
+  display: block;
+  padding: 12px 25px;
+  font-size: 18px;
+  margin-top: 30px;
+  background-color: #d32f2f; /* 紅色 */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 200px; /* 設置固定寬度 */
+  margin-left: auto; /* 置中 */
+  margin-right: auto; /* 置中 */
+}
+
+.logout-btn:hover {
+  background-color: #c62828; /* 深紅色 */
+}
+
+.settings-btn {
+  position: fixed; /* 固定在畫面右下角 */
+  bottom: 20px;
+  right: 20px;
+  background-color: #1e3a8a; /* 深藍色 */
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 50%; /* 讓按鈕變成圓形 */
+  font-size: 18px;
+  cursor: pointer;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease, transform 0.2s;
+}
+
+.settings-btn:hover {
+  background-color: #3b82f6; /* 淺藍色 */
+  transform: scale(1.1);
+}
+
+
+
+/* StatisticDetail 頁面樣式 */
+.statistic-detail {
+  text-align: center;
+  margin-top: 50px;
+  padding: 20px;
+  background-color: #e3f2fd; /* 淡藍色背景 */
+  border-radius: 12px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* 標題區塊 */
+.statistic-detail h1 {
+  font-size: 40px;
+  color: #0d47a1; /* 深藍色 */
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+
+/* 可編輯標題 */
+.statistic-detail input {
+  font-size: 24px;
+  padding: 5px;
+  text-align: center;
+  border: 2px solid #0d47a1;
+  border-radius: 6px;
+  width: 60%;
+  outline: none;
+}
+
+/* 備註區塊 */
+.note {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* 備註輸入框 */
+#note {
+  width: 90%;
+  max-width: 600px;
+  height: 120px;
+  padding: 10px;
+  border: 2px solid #64b5f6; /* 淺藍色 */
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+  resize: none;
+  margin-bottom: 10px;
+}
+
+.statistic-detail h3 {
+  font-size: 20px;
+  color: #000000; /* 深藍色 */
+  cursor: pointer;
+  margin-bottom: 15px;
+  margin-top: 35px;
+}
+
+.data-input {
+  display: flex;
+  justify-content: center; /* 讓它們置中 */
+  align-items: center; /* 讓輸入框和按鈕垂直對齊 */
+  gap: 10px; /* 設定間距 */
+  margin-top: 10px;
+}
+
+/* 備註儲存按鈕 */
+.save-note-btn {
+  background-color: #0d47a1; /* 深藍色 */
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.save-note-btn:hover {
+  background-color: #1565c0;
+}
+
+/* 匯出 & 刪除按鈕的區塊 */
+.export-as-excel-btn, 
+.delete-stat-btn {
+  width: 45%;
+  max-width: 300px;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.export-as-excel-btn {
+  background-color: #1e88e5; /* 中等藍色 */
+  color: white;
+}
+
+.export-as-excel-btn:hover {
+  background-color: #1565c0;
+}
+
+.delete-stat-btn {
+  background-color: #d32f2f; /* 紅色 */
+  color: white;
+}
+
+.delete-stat-btn:hover {
+  background-color: #b71c1c;
+}
+
+/* 新增數據輸入框 */
+.new-data-input {
+  height: 40px; /* 確保輸入框高度一致 */
+  padding: 5px 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* 儲存數據按鈕 */
+.data-submit-btn {
+  height: 40px; /* 確保按鈕和輸入框高度一致 */
+  background-color: #0d47a1;
+  color: white;
+  padding: 5px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  align-items: center; /* 讓按鈕內的文字置中 */
+  justify-content: center;
+}
+
+.data-submit-btn:hover {
+  background-color: #1565c0;
+}
+
+/* 資料表 */
+#data-table {
+  margin: auto;
+  margin-top: 30px;
+  max-width: 600px;
+  border-collapse: collapse; /* 確保表格邊框不重疊 */
+  width: 100%; /* 讓表格撐滿容器 */
+}
+
+#data-table th,
+#data-table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+  max-width: 250px; /* 設定最大寬度，避免過長撐開 */
+  word-break: break-word; /* 過長的單字會自動換行 */
+  white-space: normal; /* 讓內容可以正常換行 */
+}
+
+#data-table th {
+  background-color: #1976d2;
+  color: white;
+}
+
+/* 操作欄內的按鈕 */
+#data-table button {
+  background-color: #1e88e5;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 5px;
+}
+
+#data-table button:hover {
+  background-color: #1565c0;
+}
+
+#data-table button:last-child {
+  background-color: #d32f2f; /* 刪除按鈕 */
+}
+
+#data-table button:last-child:hover {
+  background-color: #b71c1c;
+}
+
+/* 返回按鈕 */
+.back-btn {
+  background-color: #0d47a1;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  display: block;
+  margin: 20px auto;
+}
+
+.back-btn:hover {
+  background-color: #1565c0;
+}
