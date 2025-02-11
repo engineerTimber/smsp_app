@@ -5,6 +5,38 @@ body {
   min-height: 100vh; /* 確保背景填滿整個視窗 */
 }
 
+/* Loading 視覺樣式 */
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f4f8; /* 可以使用登入頁的背景顏色 */
+  flex-direction: column;
+}
+
+.loading-spinner {
+  border: 8px solid #f3f3f3; /* 淺灰色 */
+  border-top: 8px solid #3498db; /* 藍色 */
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 2s linear infinite;
+}
+
+.loading-container p {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #333; /* 可以根據設計調整顏色 */
+  font-weight: 600;
+}
+
+/* 旋轉動畫 */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
 /* 登入頁面的整體布局 */
 .login-container {
   display: flex;

@@ -4,6 +4,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import Swal from "sweetalert2";
 
 function Setting() {
+    const apiUrl = process.env.REACT_APP_API_URL;
     const { user_id } = useParams();
 
     const navigate = useNavigate();

@@ -4,6 +4,7 @@ import axios from "axios";
 import Swal from "sweetalert2";
 
 function StatisticDetail() {
+    const apiUrl = process.env.REACT_APP_API_URL;
     const {title} = useParams();
     const [titleNow, setTitleNow] = useState("");
     const [isEditingTitle, setIsEditingTitle] = useState(false);

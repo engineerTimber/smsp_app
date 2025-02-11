@@ -4,6 +4,7 @@ import { useNavigate, useLocation } from "react-router-dom";
 import Swal from "sweetalert2";
 
 function Home() {
+  const apiUrl = process.env.REACT_APP_API_URL;
   const [userNow, setUserNow] = useState("");
   const [statistics, setStatistics] = useState([]); // 存放統計項目
 

@@ -1,10 +1,31 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 
 function Login() {
+  const apiUrl = process.env.REACT_APP_API_URL;
   const [isRegister, setIsRegister] = useState(false); // 控制登入/註冊模式
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // 呼叫後端 API 來叫醒後端
+    const wakeUpBackend = async () => {
+      try {
+        const response = await axios.get('https://smsp-gzuc.onrender.com/api/wakeup');
+        if (response.status === 200) {
+          console.log("後端已喚醒");
+          setLoading(false);
+        }
+      } catch (error) {
+        console.error("API 呼叫錯誤:", error);
+        setLoading(false);
+      }
+    };
+
+    wakeUpBackend();
+  }, []);
+
   const [formData, setFormData] = useState({
     name: "",
     password: "",
@@ -31,7 +52,7 @@ function Login() {
         formData,
         {
           headers: {
-          'Content-Type': 'application/json',
+            'Content-Type': 'application/json',
           },
         }
         );
@@ -82,6 +103,14 @@ function Login() {
     }
   };
 
+  if (loading) {
+    return (
+      <div className="loading-container">
+        <div className="loading-spinner"></div>
+        <p>Loading...</p>
+      </div>
+    );
+  }
 
   return (
     <div className="login-container">
