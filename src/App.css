@@ -189,6 +189,21 @@ h2 {
   transform: scale(1.05);
 }
 
+.readme-btn {
+  background-color: #1e88e5;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.readme-btn:hover {
+  background-color: #1565c0;
+  transform: scale(1.05);
+}
 
 
 /* 統計項目樣式 - 改為圓角按鈕風格，並加上一些陰影來區隔 */
