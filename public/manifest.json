@@ -1,6 +1,6 @@
 {
   "short_name": "隨手記",
-  "name": "隨手記(smsp)",
+  "name": "隨手記",
   "icons": [
     {
       "src": "favicon.ico",
@@ -20,6 +20,6 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#0d47a1",
+  "background_color": "#E3F2FD"
 }

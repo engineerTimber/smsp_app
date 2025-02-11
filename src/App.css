@@ -195,7 +195,7 @@ h2 {
 .statistics {
   list-style: none;
   padding: 0;
-  margin-top: 30px;
+  margin-top: 10px;
 }
 
 .statistics li {
@@ -487,4 +487,115 @@ h2 {
 
 .back-btn:hover {
   background-color: #1565c0;
+}
+
+/* 手機響應式 */
+@media (max-width: 768px) {
+  .login-box {
+    width: 80%;
+    padding: 20px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  .input-group input,
+  .primary-btn,
+  .secondary-btn {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .statistics button {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+
+  .create-item-btn,
+  .logout-btn,
+  .save-note-btn,
+  .back-btn {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+
+  .statistic-detail input {
+    width: 80%;
+    font-size: 20px;
+  }
+
+  #data-table th,
+  #data-table td {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .new-data-input,
+  .data-submit-btn {
+    font-size: 14px;
+    height: 35px;
+    padding: 8px 10px;
+  }
+
+  .settings-btn {
+    bottom: 10px;
+    right: 10px;
+    padding: 8px 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  h2 {
+    font-size: 22px;
+  }
+
+  .login-box {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .input-group input,
+  .primary-btn,
+  .secondary-btn {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .statistics button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  .create-item-btn,
+  .logout-btn,
+  .save-note-btn,
+  .back-btn {
+    font-size: 12px;
+    padding: 8px 16px;
+  }
+
+  .statistic-detail input {
+    width: 75%;
+    font-size: 18px;
+  }
+
+  #data-table th,
+  #data-table td {
+    font-size: 12px;
+    padding: 6px;
+  }
+
+  .new-data-input,
+  .data-submit-btn {
+    font-size: 12px;
+    height: 30px;
+    padding: 6px 8px;
+  }
+
+  .settings-btn {
+    bottom: 5px;
+    right: 5px;
+    padding: 6px 10px;
+  }
 }

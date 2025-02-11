@@ -12,7 +12,7 @@ function Login() {
     // 呼叫後端 API 來叫醒後端
     const wakeUpBackend = async () => {
       try {
-        const response = await axios.get('https://smsp-gzuc.onrender.com/api/wakeup');
+        const response = await axios.get(`${apiUrl}/api/wakeup`);
         if (response.status === 200) {
           console.log("後端已喚醒");
           setLoading(false);
@@ -108,6 +108,7 @@ function Login() {
       <div className="loading-container">
         <div className="loading-spinner"></div>
         <p>Loading...</p>
+        <p>正在叫醒貪睡的後端（¯﹃¯）</p>
       </div>
     );
   }

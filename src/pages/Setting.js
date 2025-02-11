@@ -21,7 +21,14 @@ function Setting() {
           if (result.isConfirmed) {
             axios.delete(`${apiUrl}/api/users/${user_id}/delete`)
             .then(() => {
-                alert("刪除成功");
+                Swal.fire({
+                  toast: true,
+                  position: 'top',
+                  icon: 'success',
+                  title: '刪除成功!',
+                  showConfirmButton: false,
+                  timer: 3000 // 3秒後自動消失
+                });
                 navigate("/login");
                 localStorage.removeItem("name");
                 localStorage.removeItem("user_id");
